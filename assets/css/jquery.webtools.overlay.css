@@ -1,0 +1,153 @@
+/* -------- overlays -------- */
+
+.overlay {
+    display: inline-block;
+    font-size: 16pt;
+    height: 18px;
+    text-align: center;
+    width: 19px;
+}
+
+/* ------- Sprites -------- */
+
+.overlay.smbtn {
+    background: url("../images/sprite.png") center center;
+    background-position: -214px -76px;
+}
+
+.overlay.smbtn:active {
+    background-position: -214px -94px;
+}
+
+.overlay-overlay {
+    display: inline-block;
+    left: 0;
+    opacity: 1;
+    top: 0;
+    position: absolute;
+}
+
+#overlay-menu {
+    background-color: white;
+    border: 3px outset #D0D0D0;
+    border-radius: 10px;
+    left: -300px;
+    bottom: 0;
+    height: 10px;
+    margin-left: 50%;
+    padding: 10px 10px 0 10px;
+    position: absolute;
+    overflow: hidden;
+    width: 600px;
+    z-index: 8000;
+}
+
+#overlay-add {
+    cursor: pointer;
+}
+
+#overlay-list {
+    display: inline-block;
+    float: left;
+    height: 200px;
+    /*margin-right: 40px;*/
+    width: 200px;
+}
+
+#overlay-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#overlay-list ul li {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#overlay-list ul li input[type=file] {
+    cursor: text;
+    display: none;
+}
+
+#overlay-list ul li.selected {
+    background-color: #FFFFFF;
+    border: 2px solid gray;
+}
+
+#overlay-list ul li:hover {
+    border: 2px solid gray;
+}
+
+#overlay-list ul li span.overlay-picture {
+    background-color: black;
+    display: inline-block;
+    height: 32px;
+    margin: 4px 12px 4px 4px;
+    width: 32px;
+    vertical-align: middle;
+}
+
+#overlay-list ul li span.overlay-name {
+    display: inline-block;
+    max-width: 90px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    width: 120px;
+}
+
+#overlay-list ul li span.overlay-close {
+    float: right;
+}
+
+#overlay-list ul li span.overlay-close:hover {
+    text-decoration: underline;
+}
+
+#overlay-options {
+    display: none;
+    float: right;
+    height: 200px;
+    width: 380px;
+}
+
+#overlay-options ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#overlay-options ul li:first {
+    margin-top: 5px;
+}
+
+#overlay-options ul li {
+    margin-bottom: 5px;
+}
+
+#overlay-options ul li > span:nth-child(odd) {
+	display: inline-block;
+    font-weight: bold;
+	width: 80px;
+}
+
+#overlay-opacity {
+    display: inline-block;
+    width: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#overlay-left, #overlay-top, #overlay-width, #overlay-height {
+    font-size: 0.8em;
+    margin: 0px 8px 3px 3px;
+}
+
+#overlay-lock, label[for=overlay-lock] {
+    vertical-align: bottom;
+}
